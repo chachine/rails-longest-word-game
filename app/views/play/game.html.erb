@@ -1,0 +1,14 @@
+<h1>Play#game</h1>
+<p>Find me in app/views/play/game.html.erb</p>
+<h1>"******** Welcome to the longest word-game !********"</h1>
+<p>"Here is your grid :"</p>
+<%= @grid %>
+<form action="/score" class="form-inline">
+  <div class = "form-group">
+    <label for="word">Enter your word</label>
+    <input type="text" id="word" name="word" placeholder="what's your word guess">
+    <input type="hidden" name="grid" value='<%= @grid %>'' >
+    <input type="hidden" name="start_time" value= '<%= Time.now %>' >
+  </div>
+    <input type="submit" value="Go!" class="btn btn-primary">
+</form>
